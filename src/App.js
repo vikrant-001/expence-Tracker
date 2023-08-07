@@ -1,5 +1,7 @@
 import './App.css';
-import ExpenceItem from './component/ExpenceItem';
+import ExpenceDetails from './component/ExpenceDetails';
+import ExpenceDate from './component/ExpenceDate';
+import "./component/ExpenceItem.css"
 function App() {
   const expenses = [
     {
@@ -23,31 +25,38 @@ function App() {
     },
   ];
   return (
-    <div>
-      <h1>Head</h1>
-      <ExpenceItem 
-        title = {expenses[0].title}
-        amount = {expenses[0].amount}
-        date = {expenses[0].date}
-      />
+    <div >
+      
+      <div className='expense-item'>
+      <ExpenceDate 
+      date = {expenses[0].date}/>
 
-      <ExpenceItem 
-        title = {expenses[1].title}
-        amount = {expenses[1].amount}
-        date = {expenses[1].date}
-      />
+      <ExpenceDetails 
+          title = {expenses[0].title}
+          amount = {expenses[0].amount}/>
+      </div>
+        
+        <div className='expense-item'>
+          <ExpenceDate date = {expenses[1].date}/>
+          <ExpenceDetails 
+            title = {expenses[1].title}
+            amount = {expenses[1].amount}/>
+        </div>
 
-      <ExpenceItem 
-        title = {expenses[2].title}
-        amount = {expenses[2].amount}
-        date = {expenses[2].date}
-      />
+        <div className= 'expense-item'>
+          <ExpenceDate date = {expenses[2].date}/>
+          <ExpenceDetails 
+            title = {expenses[2].title}
+            amount = {expenses[2].amount}/>
+        </div>
 
-      <ExpenceItem 
-        title = {expenses[3].title}
-        amount = {expenses[3].amount}
-        date = {expenses[3].date}
-      />
+        <div className='expense-item'>
+          <ExpenceDate date = {expenses[3].date}/>
+          <ExpenceDetails 
+            title = {expenses[3].title}
+            amount = {expenses[3].amount}/>
+        </div>
+      
       
     </div>
   );
