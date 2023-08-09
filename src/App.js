@@ -24,9 +24,17 @@ function App() {
     },
   ];
 
+  const updateExpenceHandler = ((value) => {
+    const newValue = {...value};
+    expenses.push(newValue);
+    
+  })
+
+
+
   return (
     <div>
-      <NewExpence/>
+      <NewExpence updateExpence = {updateExpenceHandler}/>
       <Expenses items = {expenses} />
     </div>
   );

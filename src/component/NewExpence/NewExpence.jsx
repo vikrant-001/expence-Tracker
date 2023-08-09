@@ -1,9 +1,16 @@
 import './NewExpence.css'
 import ExpenceForm from './ExpenceForm'
-const NewExpence = () => {
+const NewExpence = (props) => {
+    const onSaveDataHandler = ((value) => {
+        const expenceData = {
+            ...value,
+            id : Math.random().toString(),
+        };
+        props.updateExpence(expenceData);
+    })
     return (
         <div className= "new-expence">
-            <ExpenceForm/>
+            <ExpenceForm onSaveData = {onSaveDataHandler}/>
         </div>
     )
 }
