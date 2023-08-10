@@ -1,5 +1,6 @@
 import './NewExpence.css'
 import ExpenceForm from './ExpenceForm'
+import { useState } from 'react';
 const NewExpence = (props) => {
     const onSaveDataHandler = ((value) => {
         const expenceData = {
@@ -8,6 +9,7 @@ const NewExpence = (props) => {
         };
         props.updateExpence(expenceData);
     })
+
     return (
         <div className= "new-expence">
             <ExpenceForm onSaveData = {onSaveDataHandler}/>

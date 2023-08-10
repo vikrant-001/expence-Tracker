@@ -1,0 +1,9 @@
+.expences-list{
+    list-style: none;
+    padding: 0;
+}
+
+.expences-list_fallback{
+    color: white;
+    text-align: center;
+}
